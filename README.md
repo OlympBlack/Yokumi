@@ -39,7 +39,7 @@ NaturaShea/
 ### 1️⃣ Cloner le projet
 
 ```bash
-git clone https://github.com/ton-utilisateur/NaturaShea.git
+git clone https://github.com/OlympBlack/NaturaShea.git
 cd NaturaShea
 
 
@@ -153,14 +153,3 @@ Les routes API sont accessibles via :
 5. Ouvrez une Pull Request
 
 
-
-## 📄 Licence
-
-Projet open-source sous licence **MIT**.
-
-```
-
----
-
-Si tu veux, je peux aussi t’ajouter un exemple de `.env` pour Laravel et React ou une collection Postman pour tester l’API. Tu me dis !
-```
