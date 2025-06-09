@@ -9,7 +9,7 @@ L'application est développée avec une architecture découplée :
 - Backend développé en **Laravel** (`server/`)  
 - Base de données : **MySQL**
 
----
+
 
 ## ✅ Prérequis
 
@@ -23,11 +23,8 @@ Assurez-vous d’avoir les outils suivants installés sur votre machine :
 - [Laravel CLI](https://laravel.com/docs/installation)
 - Un éditeur de code (ex : VS Code)
 
----
 
 ## 📁 Structure du projet
-
-```
 
 NaturaShea/
 │
@@ -35,9 +32,7 @@ NaturaShea/
 ├── server/         # Backend - Laravel
 ├── README.md       # Documentation du projet
 
-````
 
----
 
 ## 🚀 Installation et démarrage
 
@@ -46,9 +41,7 @@ NaturaShea/
 ```bash
 git clone https://github.com/ton-utilisateur/NaturaShea.git
 cd NaturaShea
-````
 
----
 
 ## 🔵 Frontend (React)
 
@@ -56,19 +49,19 @@ cd NaturaShea
 
 ```bash
 cd client
-```
+
 
 ### 📦 Installer les dépendances
 
 ```bash
 npm install
-```
+
 
 ### ▶️ Démarrer le serveur de développement
 
 ```bash
 npm run dev
-```
+
 
 L'application sera accessible à :
 [http://localhost:5173](http://localhost:5173)
@@ -81,7 +74,7 @@ Créer un fichier `.env` à la racine du dossier `client/` si nécessaire :
 VITE_API_URL=http://localhost:8000/api
 ```
 
----
+
 
 ## 🔴 Backend (Laravel)
 
@@ -140,7 +133,7 @@ L’API sera disponible à :
 Les routes API sont accessibles via :
 `http://localhost:8000/api/...`
 
----
+
 
 ## 💡 Conseils pour les développeurs
 
@@ -149,7 +142,7 @@ Les routes API sont accessibles via :
 * Utilisez des outils comme **Postman** ou **Insomnia** pour tester les endpoints API.
 * En cas de problèmes CORS, vérifiez bien les fichiers de config Laravel (`app/Http/Middleware/HandleCors.php` ou `config/cors.php`).
 
----
+
 
 ## 🤝 Contribuer
 
@@ -159,7 +152,7 @@ Les routes API sont accessibles via :
 4. Pushez la branche : `git push origin feature/ma-fonctionnalite`
 5. Ouvrez une Pull Request
 
----
+
 
 ## 📄 Licence
 
