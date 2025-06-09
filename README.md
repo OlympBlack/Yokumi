@@ -1,6 +1,4 @@
-Parfait ! Voici le fichier `README.md` **corrigé et prêt à l’emploi**, avec une description précise de ton projet :
 
----
 
 ```markdown
 # 🌿 NaturaShea
