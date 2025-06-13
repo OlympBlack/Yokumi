@@ -1,4 +1,4 @@
-const ContactInput = ({ type, placeholder, value, onChange, className}) => {
+const Input = ({ type, placeholder, value, onChange, className}) => {
     return (
         <input 
             type={type} 
@@ -8,9 +8,10 @@ const ContactInput = ({ type, placeholder, value, onChange, className}) => {
             autoComplete="off"
             value={value}
             onChange={onChange}
+            contentEditable= {`${contentEditable ? contentEditable : "true"}`}
         />
     )
     
 }
 
-export default ContactInput;
+export default Input;

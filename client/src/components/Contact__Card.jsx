@@ -1,13 +1,13 @@
 import AllContacts from "./AllContacts";
 
-const ContactCard = ({content, svg, value }) => {
+const ContactCard = ({content, svg, value, className }) => {
     return (
-        <div className="bg-marron text-white py-6 px-4">
+        <div className={` space-y-4 rounded-xl border-marron text-white py-12 px-8 ${className ? className : ""}`}>
             <AllContacts 
                 svg={svg}
                 value={value}
             />
-            <p>
+            <p className="text-lg">
                 {content}
             </p>
         </div>

@@ -2,7 +2,7 @@ import AllContacts from "./AllContacts";
 import Links from "./Links";
 const Footer = () => {
     return (
-        <footer className="bg-black px-4">
+        <footer className="bg-black px-4 space-y-4">
             <img src="/assets/main-logo.png" alt="logo de Yocumi" />
             <div className="space-y-4">
                 <div className="space-y-2">
