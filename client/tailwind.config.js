@@ -10,6 +10,10 @@ export default {
         beige: "#EFEFDB",
         marron: "#40150D",
         jaune: "#E6C400"
+      },
+      fontFamily:{
+        inter: ['Inter', 'sans-serif'],
+        mont: ['Montserrat', 'sans-serif'],
       }
     },
   },

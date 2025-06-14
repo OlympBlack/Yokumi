@@ -10,14 +10,14 @@ const FicheProduit = ()=>{
         {
             id: 1,
             nom: "Crème hydratante",
-            image: "/assets/",
+            image: "/assets/la-crèmee-de-yocumi.jpg",
             prix: "5000 F",
-            nbAvis: "",
-            moyenneNote: "",
-            details: "",
+            nbAvis: "24",
+            moyenneNote: 4.5,
+            details: "Cette crème hydratante pour le corps est fabriqué à base de beurre de karité du commerce de YOKUMI provenant  de Tanguiéta, réputé pour ces propriétés ultra-hydratantes.",
             commentaire: [
                 {
-                    profile: "/assets/",
+                    profile: "/assets/profile-avis.jpg",
                     nomCommentateur: "Adjotor voleur",
                     message: "<<Je vous le trecommande fortement car c’est vraiment le meilleur>>"
                 }
@@ -28,7 +28,7 @@ const FicheProduit = ()=>{
     return(
         <>
             <Navbar />
-                <section className="">
+                <section className="px-4 space-y-6">
                     <div className="">
                         {
                             produits.map((produit)=>(
@@ -46,6 +46,7 @@ const FicheProduit = ()=>{
                                 <ProductCommand
                                     key={product.id}
                                     nomProduit = {product.nom}
+                                    noteMoyenne={product.moyenneNote}
                                     totalAvis = {product.nbAvis}
                                     prix={product.prix}
                                     details={product.details}

@@ -1,4 +1,4 @@
-const SubmitBtn = ({ isSubmitting, text, className }) => {
+const SubmitBtn = ({text, className }) => {
     return (
         <button
             type="submit"

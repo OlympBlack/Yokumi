@@ -1,7 +1,8 @@
 import { useState } from "react";
+import StarRating from "./StarRating";
 import Input from "./Input";
 import Links from "./Links";
-const ProductCommand = ({nomProduit, totalAvis, prix, details, profileCommentateur, nomCommentateur, commentaire}) =>{
+const ProductCommand = ({nomProduit, totalAvis, moyenneNote, prix, details, profileCommentateur, nomCommentateur, commentaire}) =>{
     const [quantity, setQuantity] = useState(1);
     
     const increase = () => {
@@ -14,54 +15,54 @@ const ProductCommand = ({nomProduit, totalAvis, prix, details, profileCommentate
     
     return(
 
-        <div className="">
-            <h3 className="font-bold">{nomProduit}</h3>
-            <div className="star">
-                <img src="/" alt="" />
+        <div className="bg-white p-4 space-y-4">
+            <h3 className="font-bold text-xl">{nomProduit}</h3>
+            <div className="flex gap-4 items-center">   
+                <StarRating rating={moyenneNote} />
                 <span className="font-bold">{totalAvis}</span>
             </div>
             <p className="text-xl font-bold">{prix}</p>
             <div className="">
-                <h4 className="font-bold">Details</h4>
-                <p> 
+                <h4 className="font-bold text-lg">Details</h4>
+                <p className="text-sm"> 
                     {details}
                 </p>
             </div>
-            <div className="">
-                <h4>Quantité</h4>
-                <div className="flex">
-                    <button className="border-2 border-black px-3"
+            <div className="flex items-center gap-3">
+                <h4 className="font-bold">Quantité</h4>
+                <div className="flex grow-0">
+                    <button className="border border-black px-3"
                     onClick={()=>decrease()}
                     >{"<"}</button>
-                    <Input 
-                        type="text"
-                        className="w-11 h-4 indent-0 border-black rounded-none"
-                        value= {quantity}
-                        contentEditable = "false"
-                        onChange={()=>{}}
-                    />
-                    <button onClick={()=>increase()} className="border-2 border-black px-3">{">"}</button>
+                    <span className="border border-black px-3">
+                        {quantity}
+                    </span>
+                    <button onClick={()=>increase()} className="border border-black px-3">{">"}</button>
                 </div>
             </div>
-            <div className="bg-[D9D9D9]">
-                <img src={profileCommentateur} alt="" />
-                <div className="">
-                    <h4>{nomCommentateur}</h4>
-                    <p>{commentaire} </p>
+            <div className="bg-[#D9D9D9] p-4 gap-3 rounded-xl">
+
+                <div className="flex items-center gap-3">
+                    <img className="rounded-full h-10 w-10 object-cover" src={profileCommentateur} alt="" />
+                    <h4 className="font-bold text-lg">{nomCommentateur}</h4>
+                </div>
+                <div>
+                    <h4 className="hidden font-bold text-lg">{nomCommentateur}</h4>
+                    <p className="text-sm">{commentaire} </p>
                 </div>
             </div>
-            <div className="">
+            <div className="flex flex-col gap-5">
                 <Links 
                     link="/cart"
                     content= "Ajouter au panier"
                     target="_self"
-                    className= "bg-[#D9D9D9] font-bold"
+                    className= "bg-[#D9D9D9] font-bold p-4 rounded-full flex justify-center"
                 />
                 <Links 
-                    link="/cart"
+                    link="/buy"
                     content= "Acheter maintenant"
                     target="_self"
-                    className= "bg-jaune font-bold"
+                    className= "bg-jaune font-bold p-4 rounded-full flex justify-center"
                 />
             </div>
         </div>

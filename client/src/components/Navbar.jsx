@@ -20,7 +20,7 @@ const Navbar = ()=>{
                 }
             />
 
-            <div className={`${isOpen ? "block" : "hidden"} absolute flex flex-col gap-4 h-screen w-screen top-0 left-1/2 transform -translate-x-1/2 bg-red-400 items-center justify-center
+            <div className={`${isOpen ? "block" : "hidden"} absolute z-50 flex flex-col gap-4 h-screen w-screen top-0 left-1/2 transform -translate-x-1/2 bg-red-400 items-center justify-center
                 lg:flex lg:flex-row lg:gap-8 lg:h-auto lg:grow lg:transform-none lg:bg-transparent lg:static lg:p-0 lg:items-center
             `}>
                 <div className="nav-links flex flex-col lg:flex-row lg:mx-auto lg:space-x-10">
