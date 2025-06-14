@@ -2,11 +2,11 @@ import AllContacts from "./AllContacts";
 import Links from "./Links";
 const Footer = () => {
     return (
-        <footer className="bg-black px-4 space-y-4">
+        <footer className="mt-4 bg-black px-4 lg:px-12 space-y-4">
             <img src="/assets/main-logo.png" alt="logo de Yocumi" />
-            <div className="space-y-4">
-                <div className="space-y-2">
-                    <div className="flex flex-col gap-4">
+            <div className="space-y-4 ">
+                <div className="space-y-2 lg:flex lg:justify-between lg:items-center">
+                    <div className="flex flex-col gap-4 lg:flex-row">
                         <AllContacts 
                         svg={<img src="/assets/Location.svg" alt="Location icon" />}
                         value="Bénin, Cotonou...."

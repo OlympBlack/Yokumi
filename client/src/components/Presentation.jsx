@@ -34,7 +34,7 @@ const Presentation = () => {
         },
     ]
     return(
-        <section className="px-4 flex flex-col gap-3 md:grid md:grid-cols-3">
+        <section className="px-12 lg:px-24 flex flex-col gap-3 lg:gap-16 md:grid md:grid-cols-3">
             {
                 naturashea.map((item, index)=>(
                     <PresentationCards 

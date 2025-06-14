@@ -10,19 +10,19 @@ const BestProducts = () => {
             description: 'Un savon à base de Karité qui rendra votre peau très douce',
         },
         {
-            id: 1,
+            id: 2,
             image: '/assets/image-karite.png',
             alt: 'Product 1',
             title: 'Savon extra doux',
             description: 'Un savon à base de Karité qui rendra votre peau très douce',
-        }
+        },
         
     ];
     return(
-        <section className="px-4 space-y-8">
+        <section className="px-4 space-y-8 lg:px-24">
             <h2 className="text-2xl font-bold">Nos <span className="text-marron">Meilleurs</span> Produits</h2>
 
-            <div className="space-y-8">
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-2  lg:grid-cols-3 2xl:grid-cols-4">
                 {
                     products.map((product) => (
                         <BestProductsCard 

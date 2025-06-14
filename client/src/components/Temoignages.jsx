@@ -8,7 +8,7 @@ const Temoignages = () => {
             profile: '/assets/joli-nana.png',
             userName: 'Aïcha',
             userLocation: 'Cotonou',
-            temoignage: '"Depuis que j \’ utilise le beurre de karité de cette marque, mes cheveux afro sont plus doux, plus faciles à coiffer et bien hydratés toute la semaine. J’ai enfin trouvé un soin naturel qui respecte ma texture sans l’alourdir."',
+            temoignage: '"Depuis que j’ utilise le beurre de karité de cette marque, mes cheveux afro sont plus doux, plus faciles à coiffer et bien hydratés toute la semaine. J’ai enfin trouvé un soin naturel qui respecte ma texture sans l’alourdir."',
         },
         {
             id: 2,
@@ -19,9 +19,9 @@ const Temoignages = () => {
         }
     ]
     return(
-        <section className="mt-24 px-6 space-y-16">
+        <section className="flex flex-col gap-24 px-6 lg:px-24">
             <h2 className="uppercase text-2xl font-bold">Témoignages Clients</h2>
-            <div className="space-y-24">
+            <div className="flex flex-col gap-32 lg:flex-row mx-auto lg:justify-center xl:gap-64 md:grid md:grid-cols-2 ">
                 {
                     temoignages.map((temoignage) => (
                         <TemoignagesCard 
@@ -46,5 +46,4 @@ const Temoignages = () => {
         </section>
     )
 }
-
 export default Temoignages;

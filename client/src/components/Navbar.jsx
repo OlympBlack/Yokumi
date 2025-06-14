@@ -7,7 +7,7 @@ const Navbar = ()=>{
         setIsOpen(!isOpen);
     };
     return(
-        <nav className="flex justify-between items-center relative p-4 lg:px-32 lg:py-6 ">
+        <nav className="flex justify-between items-center relative p-4 lg:px-60 lg:py-6 ">
             <Links 
                 link="/"
                 target="_self"
@@ -23,41 +23,36 @@ const Navbar = ()=>{
             <div className={`${isOpen ? "block" : "hidden"} absolute z-50 flex flex-col gap-4 h-screen w-screen top-0 left-1/2 transform -translate-x-1/2 bg-red-400 items-center justify-center
                 lg:flex lg:flex-row lg:gap-8 lg:h-auto lg:grow lg:transform-none lg:bg-transparent lg:static lg:p-0 lg:items-center
             `}>
-                <div className="nav-links flex flex-col lg:flex-row lg:mx-auto lg:space-x-10">
+                <div className="nav-links flex lg:text-mdm xl:text-lg flex-col font-bold lg:items-center lg:flex-row lg:mx-auto lg:text-md lg:space-x-5">
                     <Links 
                         link="/"
                         target="_self"
-                        className="font-bold xl:text-2xl"
+                        className="xl:text-xl"
                         content="Accueil"
                     />
                     <Links 
                         link="/about"
                         target="_self"
-                        className="font-bold xl:text-2xl"
                         content="A-propos"
                     />
                     <Links 
                         link="/produits"
                         target="_self"
-                        className="font-bold xl:text-2xl"
                         content="Produits"
                     />
                     <Links 
                         link="/impact"
                         target="_self"
-                        className="font-bold xl:text-2xl"
                         content="Impact"
                     />
                     <Links 
                         link="/faq"
                         target="_self"
-                        className="font-bold xl:text-2xl"
                         content="FAQ"
                     />
                     <Links 
                         link="/contact"
                         target="_self"
-                        className="font-bold xl:text-2xl"
                         content="Contact"
                     />
                 </div>

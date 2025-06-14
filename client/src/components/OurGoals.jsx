@@ -1,58 +1,36 @@
-import OurGoalCard from './OurGoalCard'
-
 const OurGoals = ()=>{
-
-    const cards = [
-        {
-            id:1,
-            imgName:"/assets/impact-money.png",
-            illustrate: "diamant.png",
-            color: "#21B6A2A6",
-            alt: 'Illutre l"impact economique', 
-            details: "Impact Socio-Economique sur le marché béninois et international"
-        }, 
-        {
-            id:2,
-            imgName:"/assets/impact-health.png",
-            illustrate: "salute.png",
-            color: "#E5B724A6",
-            alt: "Illutre l'impact sur la santé", 
-            details: "Impact sur la santé en optant pour un produit 100% naturel"
-        },
-        {
-            id:3,
-            imgName:"/assets/impact-health.png",
-            illustrate: "salute.png",
-            color: "#E5B724A6",
-            alt: "Illutre l'impact sur la santé", 
-            details: "Impact sur la santé en optant pour un produit 100% naturel"
-        },
-        {/*
-            id:3,
-            imgName:"/assets/mamadou.png",
-            illustrate: "balls.png",
-            color: "#CE584AA6",
-            alt: 'Illutre l\'impact sur la c', 
-            details: "Impact culturel et traditionnel"*/
-        }
-    ]
+    
     return(
         <div className="space-y-8">
             <h2 className="text-5xl text-center">Nos Objectifs</h2>
             <div>
-                
-                {
-                    cards.map((card) => (
-                        <OurGoalCard 
-                            key={card.id}
-                            ImageName={card.imgName}
-                            illustration={card.illustrate}
-                            details={card.details}
-                            color={card.color}
-                            alt={card.alt}
-                        />
-                    ))
-                }
+                <div
+                    className="h-[350px] w-full relative bg-[url('/assets/impact-money.png')] bg-cover bg-center"
+                >
+                    <div className="absolute inset-0 bg-[#21B6A2A6] mix-blend-multiply"></div>
+                    <div className="relative z-10 p-16 space-y-5">
+                        <img src="/assets/diamant.png" alt="" width="60px" />
+                        <p className="font-semibold text-white">Impact Socio-Economique sur le marché béninois et international </p>
+                    </div>
+                </div>
+                <div
+                    className="h-[350px] w-full relative bg-[url('/assets/impact-health.png')] bg-cover bg-center"
+                >
+                    <div className="absolute inset-0 bg-[#E5B724A6] mix-blend-multiply"></div>
+                    <div className="relative z-10 p-16 space-y-5">
+                        <img src="/assets/salute.png" alt="" width="60px" />
+                        <p className="font-semibold text-white">Impact sur la santé en optant pour un produit 100% naturel  </p>
+                    </div>
+                </div>
+                <div
+                    className="h-[350px] w-full relative bg-[url('/assets/culture-impact.png')] bg-cover bg-center"
+                >
+                    <div className="absolute inset-0 bg-[#CE584AA6] mix-blend-multiply"></div>
+                    <div className="relative z-10 p-16 space-y-5">
+                        <img src="/assets/balls.png" alt="" width="60px" />
+                        <p className="font-semibold text-white">Impact sur la santé en optant pour un produit 100% naturel  </p>
+                    </div>
+                </div>
                 
 
             </div>

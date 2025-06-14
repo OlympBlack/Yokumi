@@ -8,15 +8,17 @@ import Footer from "../components/Footer";
 
 const Home = () => {
     return (
-        <div className="space-y-10">
-            <Navbar />
-            <Header />
-            <Presentation />
-            <BestProducts />
-            <Temoignages />
-            <FAQ />
+        <>
+                <Navbar />
+            <div className="flex flex-col gap-16 lg:px-24">
+                <Header />
+                <Presentation />
+                <BestProducts />
+                <Temoignages />
+                <FAQ />
+            </div>
             <Footer />
-        </div>
+        </>
 
     )
 }
