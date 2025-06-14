@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Presentation from "../components/Presentation";
@@ -7,21 +8,35 @@ import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 
 const Home = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.3
+            }
+        }
+    };
+
     return (
-        <>
-                <Navbar />
-            <div className="flex flex-col gap-16 lg:px-24">
+        <div className="overflow-hidden">
+            <Navbar />
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="flex flex-col gap-16 lg:gap-24 lg:px-24"
+            >
                 <Header />
                 <Presentation />
                 <BestProducts />
                 <Temoignages />
                 <FAQ />
-            </div>
+            </motion.div>
             <Footer />
-        </>
-
+        </div>
     )
 }
-
 
 export default Home;

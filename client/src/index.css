@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dans ton fichier CSS global */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }

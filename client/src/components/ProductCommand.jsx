@@ -1,71 +1,106 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import StarRating from "./StarRating";
-import Input from "./Input";
 import Links from "./Links";
-const ProductCommand = ({nomProduit, totalAvis, moyenneNote, prix, details, profileCommentateur, nomCommentateur, commentaire}) =>{
+
+const ProductCommand = ({
+    nomProduit, 
+    totalAvis, 
+    moyenneNote, 
+    prix, 
+    details,
+    profileCommentateur, 
+    nomCommentateur, 
+    commentaire
+}) => {
     const [quantity, setQuantity] = useState(1);
     
     const increase = () => {
-        setQuantity(prevQuantity => prevQuantity + 1);
+        setQuantity(prev => prev + 1);
     };
 
     const decrease = () => {
-        setQuantity(prevQuantity => Math.max(1, prevQuantity - 1))
-    }
+        setQuantity(prev => Math.max(1, prev - 1));
+    };
     
-    return(
+    return (
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="bg-white p-6 lg:p-8 rounded-xl shadow-lg space-y-6"
+        >
+            {/* En-tête */}
+            <div className="space-y-3">
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">{nomProduit}</h3>
+                
+                <div className="flex items-center gap-4">
+                    <StarRating rating={moyenneNote} />
+                    <span className="font-medium text-gray-600">{totalAvis} avis</span>
+                </div>
+                
+                <p className="text-2xl font-bold text-marron">{prix}</p>
+            </div>
 
-        <div className="bg-white p-4 space-y-4">
-            <h3 className="font-bold text-xl">{nomProduit}</h3>
-            <div className="flex gap-4 items-center">   
-                <StarRating rating={moyenneNote} />
-                <span className="font-bold">{totalAvis}</span>
+            {/* Détails */}
+            <div className="space-y-2">
+                <h4 className="font-bold text-lg text-gray-900">Détails</h4>
+                <p className="text-gray-600">{details}</p>
             </div>
-            <p className="text-xl font-bold">{prix}</p>
-            <div className="">
-                <h4 className="font-bold text-lg">Details</h4>
-                <p className="text-sm"> 
-                    {details}
-                </p>
-            </div>
-            <div className="flex items-center gap-3">
-                <h4 className="font-bold">Quantité</h4>
-                <div className="flex grow-0">
-                    <button className="border border-black px-3"
-                    onClick={()=>decrease()}
-                    >{"<"}</button>
-                    <span className="border border-black px-3">
+
+            {/* Quantité */}
+            <div className="flex items-center gap-4">
+                <h4 className="font-bold text-gray-900">Quantité</h4>
+                <div className="flex items-center border border-gray-200 rounded-lg">
+                    <button 
+                        onClick={decrease}
+                        className="px-3 py-1 lg:px-4 lg:py-2 text-lg hover:bg-gray-50 transition-colors"
+                    >
+                        -
+                    </button>
+                    <span className="px-4 py-1 border-x border-gray-200 text-center min-w-[40px]">
                         {quantity}
                     </span>
-                    <button onClick={()=>increase()} className="border border-black px-3">{">"}</button>
+                    <button 
+                        onClick={increase}
+                        className="px-3 py-1 lg:px-4 lg:py-2 text-lg hover:bg-gray-50 transition-colors"
+                    >
+                        +
+                    </button>
                 </div>
             </div>
-            <div className="bg-[#D9D9D9] p-4 gap-3 rounded-xl">
 
+            {/* Avis */}
+            <motion.div 
+                whileHover={{ y: -2 }}
+                className="bg-gray-50 p-4 rounded-xl space-y-3"
+            >
                 <div className="flex items-center gap-3">
-                    <img className="rounded-full h-10 w-10 object-cover" src={profileCommentateur} alt="" />
-                    <h4 className="font-bold text-lg">{nomCommentateur}</h4>
+                    <img 
+                        className="rounded-full h-10 w-10 object-cover" 
+                        src={profileCommentateur} 
+                        alt={`Avatar de ${nomCommentateur}`} 
+                    />
+                    <h4 className="font-bold text-gray-900">{nomCommentateur}</h4>
                 </div>
-                <div>
-                    <h4 className="hidden font-bold text-lg">{nomCommentateur}</h4>
-                    <p className="text-sm">{commentaire} </p>
-                </div>
-            </div>
-            <div className="flex flex-col gap-5">
+                <p className="text-gray-600 italic">"{commentaire}"</p>
+            </motion.div>
+
+            {/* Boutons */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Links 
                     link="/cart"
-                    content= "Ajouter au panier"
                     target="_self"
-                    className= "bg-[#D9D9D9] font-bold p-4 rounded-full flex justify-center"
+                    className="bg-gray-100 hover:bg-gray-200 font-bold p-3 rounded-full flex justify-center transition-colors"
+                    content="Ajouter au panier"
                 />
                 <Links 
                     link="/buy"
-                    content= "Acheter maintenant"
                     target="_self"
-                    className= "bg-jaune font-bold p-4 rounded-full flex justify-center"
+                    className="bg-jaune hover:bg-amber-500 font-bold p-3 rounded-full flex justify-center transition-colors"
+                    content="Acheter maintenant"
                 />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
