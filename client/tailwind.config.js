@@ -9,6 +9,7 @@ export default {
       colors:{
         beige: "#EFEFDB",
         marron: "#40150D",
+        jaune: "#E6C400"
       }
     },
   },

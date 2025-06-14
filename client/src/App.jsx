@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import Connexion from './auth/Connexion'
 import './index.css'
 import Inscription from './auth/Inscription';
+import FicheProduit from './pages/Produit';
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/inscription" element={<Inscription />} />
+        <Route path="/ficheproduit" element={<FicheProduit />} />
       </Routes>
     </Router>
   )
