@@ -1,9 +1,9 @@
 
 
 ```markdown
-# 🌿 NaturaShea
+# 🌿 Yokumi
 
-**NaturaShea** est une boutique en ligne spécialisée dans la vente de **beurre de karité naturel**.  
+**Yokumi** est une boutique en ligne spécialisée dans la vente de **beurre de karité naturel**.  
 L'application est développée avec une architecture découplée :  
 - Frontend développé en **React** (`client/`)  
 - Backend développé en **Laravel** (`server/`)  
