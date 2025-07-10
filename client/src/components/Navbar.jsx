@@ -64,7 +64,7 @@ const Navbar = () => {
             {/* Menu principal */}
             <div className={`
                 fixed lg:static inset-0 z-40
-                flex flex-col lg:flex-row lg:items-center
+                flex flex-col lg:flex-row lg:items-center lg:ml-auto 
                 bg-[#40150D] lg:bg-transparent
                 transition-all duration-500 ease-in-out
                 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full lg:translate-x-0 opacity-0 lg:opacity-100'}
@@ -98,7 +98,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Icônes actions */}
-                <div className="flex justify-center lg:justify-end gap-6 lg:gap-4 xl:gap-6">
+                <div className="flex justify-center lg:justify-end  gap-6 lg:gap-4 xl:gap-6">
                     <button aria-label="Rechercher" 
                          className="p-2 lg:bg-inherit bg-white hover:bg-opacity-20 rounded-full backdrop-blur-sm transition-all hover:scale-110">
                         <svg className="w-6 h-6 lg:w-7 lg:h-7" viewBox="0 -960 960 960" fill="#FFF lg:fill-current">
