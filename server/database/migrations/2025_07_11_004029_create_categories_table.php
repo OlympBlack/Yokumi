@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('telephone')->nullable();
-            $table->text('adresse')->nullable();
-            $table->string('ville')->nullable();
+        slugchema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom');
+            $table->string('slug')->unique();
+            $table->text('description')->nullable();
+            $table->timestamps();
         });
-
     }
 
     /**
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('categories');
     }
 };
